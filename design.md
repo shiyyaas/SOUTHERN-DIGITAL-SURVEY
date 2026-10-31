@@ -50,14 +50,6 @@ The values below are representative design tokens inspired by the supplied logo 
 | `text-secondary` | `#667085` | Supporting copy |
 | `border` | `#E4E7EB` | Hairline borders and separators |
 
-### Color usage rules
-- Keep approximately **75–85% of the interface neutral** (white and very light gray).
-- Use teal for primary actions and recognizable brand moments.
-- Use navy for selected high-contrast areas, especially the footer or one feature section—not every section.
-- Use purple sparingly for small brand details.
-- Use orange only for occasional emphasis; do not make it a competing primary color.
-- Maintain strong text contrast and never rely on color alone to communicate state.
-
 ---
 
 ## 3. Typography
@@ -99,62 +91,13 @@ Use a compact font system that balances the narrow, technical feel of the logo w
 
 ---
 
-## 4. Layout and Spacing
-
-- Use a centered content container with a maximum width of approximately `1200–1280px`.
-- Use a consistent spacing scale based on `4px` or `8px`.
-- Give major sections generous vertical spacing: approximately `80–120px` on desktop and `56–80px` on mobile.
-- Use a grid that collapses cleanly from desktop to mobile.
-- Keep content aligned to a consistent page edge.
-- Prefer open layouts and fine separators over nested cards and heavy borders.
-- Use a modest corner radius: `12–18px` for images and cards, `999px` for pill buttons only when appropriate.
-- Avoid excessive shadows; use subtle borders and low-elevation shadows only when needed.
-
----
-
 ## 5. Components
-
-### Navigation
-- Clean white or slightly translucent background.
-- Logo on the left; only essential links on the right.
-- One clear teal contact CTA.
-- Sticky navigation is acceptable if compact and unobtrusive.
-- Mobile navigation should be simple and accessible.
-
-### Buttons
-- Primary: teal background, white text.
-- Secondary: transparent or white background with a thin neutral border.
-- Use concise labels such as “Call us” and “Get directions”.
-- Hover and focus states should be clear but restrained.
-- Provide visible keyboard focus indicators.
-
-### Cards
-- Use simple surfaces with subtle borders and minimal shadow.
-- Avoid overly rounded, floating-card-heavy layouts.
-- Service cards may use a small line icon, concise title, and one short description.
-- Keep all cards consistent in spacing and alignment.
-
-### Icons
-- Use a consistent line-icon set, such as Lucide.
-- Keep icons secondary to the content.
-- Avoid mixing filled, outlined, and 3D icon styles.
 
 ### Imagery and technical graphics
 - Prefer genuine photos of surveying instruments, field work, site layouts, mapping, and completed projects.
 - Use contour lines, coordinates, grid marks, and drafting lines as subtle decorative layers.
 - Technical overlays must not reduce text readability.
 - Avoid generic AI-looking equipment imagery where real business photos are available.
-
----
-
-## 6. Motion and Interaction
-
-- Use motion only to clarify state or create a subtle sense of polish.
-- Keep transitions around `150–250ms`.
-- Prefer gentle opacity and small translate transitions.
-- Avoid parallax-heavy effects, scroll hijacking, constant animation, and elaborate page transitions.
-- Respect `prefers-reduced-motion`.
-- All interactions must work with keyboard and touch.
 
 ---
 
