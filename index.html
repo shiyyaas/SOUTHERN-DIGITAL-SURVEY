@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUTHERN DIGITAL SURVEYORS | Total Land Survey Solutions in Aluva, Kerala</title>
+    <meta name="description" content="Professional land surveying services in Aluva, Kerala. Total station survey, boundary survey (Nilam & Purayidam), plot division, contour survey, levelling, and land measurement solutions.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Rajdhani:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- FontAwesome 6 for technical line icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style type="text/tailwindcss">
+        @theme {
+          --color-brand: #087C78;
+          --color-brand-dark: #006B68;
+          --color-brand-purple: #35205F;
+          --color-brand-light: #8CCBC5;
+
+          --color-navy: #10182B;
+          --color-steel: #345C7D;
+          --color-blueprint: #6BA6C8;
+          --color-signal: #E87532;
+
+          --color-white: #FFFFFF;
+          --color-surface: #F7F8F8;
+          --color-surface-muted: #F1F3F5;
+          --color-text: #252A32;
+          --color-text-secondary: #667085;
+          --color-border: #E4E7EB;
+
+          --font-heading: "Rajdhani", sans-serif;
+          --font-body: "Roboto", sans-serif;
+          --font-technical: "IBM Plex Mono", monospace;
+          --font-secondary: "Barlow Condensed", sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: #252A32;
+            background-color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+        }
+
+        .font-mono-tech {
+            font-family: var(--font-technical);
+        }
+
+        /* Subtle Technical Coordinate Grid Background */
+        .bg-grid-pattern {
+            background-image:
+                linear-gradient(to right, rgba(16, 24, 43, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(16, 24, 43, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .bg-grid-pattern-dark {
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Contour Lines Overlay SVG */
+        .bg-contour {
+            background-image: url("data:image/svg+xml,%3Csvg width='800' height='800' viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-100 200 C 100 100, 300 400, 500 250 C 700 100, 800 300, 900 200' stroke='%23087C78' stroke-width='1' stroke-dasharray='4,4' fill='none' opacity='0.12'/%3E%3Cpath d='M-100 350 C 150 250, 350 550, 550 400 C 750 250, 850 450, 950 350' stroke='%236BA6C8' stroke-width='1' fill='none' opacity='0.1'/%3E%3Cpath d='M-100 500 C 200 400, 400 650, 600 500 C 800 350, 900 600, 1000 500' stroke='%23345C7D' stroke-width='1' fill='none' opacity='0.08'/%3E%3C/svg%3E");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#252A32] antialiased selection:bg-[#087C78] selection:text-white">
+
+    <!-- Top Technical Coordinate Header Bar -->
+    <div class="bg-[#10182B] text-white py-2.5 px-4 text-xs font-mono-tech border-b border-[#087C78]/30">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 text-white/80">
+                <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-location-dot text-[#087C78]"></i> Aluva, Ernakulam District, Kerala
+                </span>
+                <span class="hidden md:inline text-white/30">|</span>
+                <span class="hidden md:flex items-center gap-1.5">
+                    <i class="fa-solid fa-crosshairs text-[#6BA6C8]"></i> REF: 10.1099° N, 76.3570° E
+                </span>
+            </div>
+            <div class="flex items-center gap-5">
+                <a href="tel:9745656435" class="hover:text-[#8CCBC5] transition-colors flex items-center gap-2 text-white/90">
+                    <i class="fa-solid fa-phone text-[#087C78]"></i> <span>+91 97456 56435</span>
+                </a>
+                <span class="text-white/30">|</span>
+                <a href="mailto:southerndigi22@gmail.com" class="hover:text-[#8CCBC5] transition-colors flex items-center gap-2 text-white/90">
+                    <i class="fa-solid fa-envelope text-[#087C78]"></i> <span class="hidden sm:inline">southerndigi22@gmail.com</span><span class="sm:hidden">Email</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E4E7EB] transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <!-- Brand Logo & Business Name -->
+            <a href="#" class="flex items-center gap-3.5 group">
+                <img src="Public/brand/logo.png" alt="SOUTHERN DIGITAL SURVEYORS Logo" class="h-11 w-auto object-contain group-hover:scale-105 transition-transform">
+                <div>
+                    <span class="block font-heading text-xl sm:text-2xl font-bold tracking-tight text-[#10182B] leading-none">
+                        SOUTHERN DIGITAL <span class="text-[#087C78]">SURVEYORS</span>
+                    </span>
+                    <span class="block font-mono-tech text-[10px] tracking-widest text-[#345C7D] uppercase mt-1">
+                        TOTAL LAND SURVEY SOLUTIONS
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-[#252A32]">
+                <a href="#services" class="hover:text-[#087C78] transition-colors">Services</a>
+                <a href="#about" class="hover:text-[#087C78] transition-colors">About Us</a>
+                <a href="#equipment" class="hover:text-[#087C78] transition-colors">Equipment</a>
+                <a href="#fieldwork" class="hover:text-[#087C78] transition-colors">Fieldwork</a>
+                <a href="#contact" class="hover:text-[#087C78] transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="https://maps.google.com/?q=Casino+Theatre+Aluva" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl border border-[#E4E7EB] text-xs font-mono-tech uppercase tracking-wider text-[#345C7D] hover:border-[#345C7D] hover:bg-[#F7F8F8] transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot"></i> Get Directions
+                </a>
+                <a href="tel:9745656435" class="px-5 py-2.5 rounded-xl bg-[#087C78] text-white text-xs font-mono-tech uppercase tracking-wider hover:bg-[#006B68] transition-all shadow-sm flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" aria-label="Toggle menu" class="md:hidden p-2 rounded-lg text-[#252A32] hover:bg-[#F1F3F5] focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-[#E4E7EB] px-4 pt-2 pb-6 space-y-3">
+            <a href="#services" class="block px-3 py-2.5 rounded-lg text-base font-medium text-[#252A32] hover:bg-[#F7F8F8]">Services</a>
+            <a href="#about" class="block px-3 py-2.5 rounded-lg text-base font-medium text-[#252A32] hover:bg-[#F7F8F8]">About Us</a>
+            <a href="#equipment" class="block px-3 py-2.5 rounded-lg text-base font-medium text-[#252A32] hover:bg-[#F7F8F8]">Equipment</a>
+            <a href="#fieldwork" class="block px-3 py-2.5 rounded-lg text-base font-medium text-[#252A32] hover:bg-[#F7F8F8]">Fieldwork</a>
+            <a href="#contact" class="block px-3 py-2.5 rounded-lg text-base font-medium text-[#252A32] hover:bg-[#F7F8F8]">Contact</a>
+            <div class="pt-4 flex flex-col gap-3">
+                <a href="https://maps.google.com/?q=Casino+Theatre+Aluva" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl border border-[#E4E7EB] text-center text-xs font-mono-tech uppercase tracking-wider text-[#345C7D]">
+                    <i class="fa-solid fa-map-location-dot mr-2"></i> Get Directions
+                </a>
+                <a href="tel:9745656435" class="px-4 py-3 rounded-xl bg-[#087C78] text-center text-white text-xs font-mono-tech uppercase tracking-wider shadow-sm">
+                    <i class="fa-solid fa-phone mr-2"></i> Call: 97456 56435
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-[#F7F8F8] via-white to-white py-16 lg:py-24 border-b border-[#E4E7EB] bg-grid-pattern bg-contour">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#087C78]/10 border border-[#087C78]/20 text-[#087C78] font-mono-tech text-xs tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-[#087C78] animate-pulse"></span>
+                        TOTAL LAND SURVEY SOLUTIONS • ALUVA
+                    </div>
+
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#10182B] leading-[1.08]">
+                        Precision in Every Measurement.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-[#667085] max-w-2xl font-normal leading-relaxed">
+                        Reliable land surveying solutions for property measurement, boundary surveys, plot division, and development projects.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a href="#services" class="px-7 py-4 rounded-xl bg-[#087C78] text-white font-medium text-center hover:bg-[#006B68] transition-all shadow-sm flex items-center justify-center gap-2.5 group">
+                            Explore Our Services <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="https://maps.google.com/?q=Casino+Theatre+Aluva" target="_blank" rel="noopener noreferrer" class="px-7 py-4 rounded-xl border border-[#E4E7EB] bg-white text-[#252A32] font-medium text-center hover:border-[#345C7D] hover:bg-[#F7F8F8] transition-all flex items-center justify-center gap-2.5">
+                            <i class="fa-solid fa-location-arrow text-[#345C7D]"></i> Get Directions
+                        </a>
+                    </div>
+
+                    <!-- Technical Meta Indicators -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-[#E4E7EB] mt-8">
+                        <div>
+                            <span class="block font-heading text-2xl font-bold text-[#10182B]">100%</span>
+                            <span class="block font-mono-tech text-[11px] text-[#667085] uppercase mt-0.5">Verified Data</span>
+                        </div>
+                        <div>
+                            <span class="block font-heading text-2xl font-bold text-[#10182B]">Aluva</span>
+                            <span class="block font-mono-tech text-[11px] text-[#667085] uppercase mt-0.5">Ernakulam District</span>
+                        </div>
+                        <div>
+                            <span class="block font-heading text-2xl font-bold text-[#10182B]">Digital</span>
+                            <span class="block font-mono-tech text-[11px] text-[#667085] uppercase mt-0.5">Total Station</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Visual: main-person.jpg -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-[#E4E7EB] shadow-2xl bg-white p-2">
+                        <img src="Public/main-person.jpg" alt="Land Surveyor at Southern Digital Surveyors" class="w-full h-[440px] sm:h-[480px] object-cover rounded-xl">
+
+                        <!-- Floating Survey Technical Badge -->
+                        <div class="absolute bottom-5 left-5 right-5 bg-[#10182B]/95 backdrop-blur-md text-white p-4 rounded-xl border border-white/10 flex items-center justify-between">
+                            <div>
+                                <span class="block font-mono-tech text-[10px] text-[#8CCBC5] uppercase tracking-widest">Active Operations</span>
+                                <span class="block font-heading font-semibold text-base text-white">Professional Surveying &amp; Mapping</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-[#087C78] flex items-center justify-center text-white shrink-0">
+                                <i class="fa-solid fa-crosshairs"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decorative subtle grid corner mark -->
+                    <div class="absolute -top-3 -right-3 w-8 h-8 border-t-2 border-r-2 border-[#087C78] pointer-events-none"></div>
+                    <div class="absolute -bottom-3 -left-3 w-8 h-8 border-b-2 border-l-2 border-[#087C78] pointer-events-none"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 lg:py-28 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="font-mono-tech text-xs uppercase tracking-widest text-[#087C78] block mb-3">Our Core Capabilities</span>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#10182B] tracking-tight">
+                    Total Land Survey Solutions
+                </h2>
+                <p class="text-[#667085] mt-4 text-base sm:text-lg">
+                    Comprehensive, high-accuracy land measurement services provided by Southern Digital Surveyors.
+                </p>
+            </div>
+
+            <!-- 8 Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- 1. Total Station Survey -->
+                <div class="rounded-2xl border border-[#E4E7EB] bg-white p-6 hover:border-[#087C78] hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#087C78]/10 border border-[#087C78]/20 flex items-center justify-center text-[#087C78] mb-5 group-hover:bg-[#087C78] group-hover:text-white transition-all">
+                            <i class="fa-solid fa-satellite-dish text-xl"></i>
+                        </div>
+                        <span class="font-mono-tech text-[10px] text-[#667085] uppercase tracking-widest">Service 01</span>
+                        <h3 class="font-heading text-xl font-bold text-[#10182B] mt-1 mb-3">Total Station Survey</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Measurement and surveying using total station equipment.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-[#E4E7EB] flex items-center justify-between text-xs font-mono-tech text-[#087C78]">
+                        <span>PRECISION TECH</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 2. Boundary Survey -->
+                <div class="rounded-2xl border border-[#E4E7EB] bg-white p-6 hover:border-[#087C78] hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#087C78]/10 border border-[#087C78]/20 flex items-center justify-center text-[#087C78] mb-5 group-hover:bg-[#087C78] group-hover:text-white transition-all">
+                            <i class="fa-solid fa-draw-polygon text-xl"></i>
+                        </div>
+                        <span class="font-mono-tech text-[10px] text-[#667085] uppercase tracking-widest">Service 02</span>
+                        <h3 class="font-heading text-xl font-bold text-[#10182B] mt-1 mb-3">Boundary Survey</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Boundary surveying for land, including the land categories referred to as Nilam and Purayidam on the card.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-[#E4E7EB] flex items-center justify-between text-xs font-mono-tech text-[#087C78]">
+                        <span>NILAM &amp; PURAYIDAM</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 3. Road Development Survey -->
+                <div class="rounded-2xl border border-[#E4E7EB] bg-white p-6 hover:border-[#087C78] hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#087C78]/10 border border-[#087C78]/20 flex items-center justify-center text-[#087C78] mb-5 group-hover:bg-[#087C78] group-hover:text-white transition-all">
+                            <i class="fa-solid fa-road text-xl"></i>
+                        </div>
+                        <span class="font-mono-tech text-[10px] text-[#667085] uppercase tracking-widest">Service 03</span>
+                        <h3 class="font-heading text-xl font-bold text-[#10182B] mt-1 mb-3">Road Development Survey</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Land surveying for road development.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-[#E4E7EB] flex items-center justify-between text-xs font-mono-tech text-[#087C78]">
+                        <span>INFRASTRUCTURE</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 4. Location Survey and Setting Out -->
+                <div class="rounded-2xl border border-[#E4E7EB] bg-white p-6 hover:border-[#087C78] hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#087C78]/10 border border-[#087C78]/20 flex items-center justify-center text-[#087C78] mb-5 group-hover:bg-[#087C78] group-hover:text-white transition-all">
+                            <i class="fa-solid fa-building-flag text-xl"></i>
+                        </div>
+                        <span class="font-mono-tech text-[10px] text-[#667085] uppercase tracking-widest">Service 04</span>
+                        <h3 class="font-heading text-xl font-bold text-[#10182B] mt-1 mb-3">Location Survey and Setting Out</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Surveying and setting out for building-related requirements.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-[#E4E7EB] flex items-center justify-between text-xs font-mono-tech text-[#087C78]">
+                        <span>BUILDING &amp; LAYOUT</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 5. Plot Division -->
+                <div class="rounded-2xl border border-[#E4E7EB] bg-white p-6 hover:border-[#087C78] hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#087C78]/10 border border-[#087C78]/20 flex items-center justify-center text-[#087C78] mb-5 group-hover:bg-[#087C78] group-hover:text-white transition-all">
+                            <i class="fa-solid fa-object-ungroup text-xl"></i>
+                        </div>
+                        <span class="font-mono-tech text-[10px] text-[#667085] uppercase tracking-widest">Service 05</span>
+                        <h3 class="font-heading text-xl font-bold text-[#10182B] mt-1 mb-3">Plot Division</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Land subdivision and plot division.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-[#E4E7EB] flex items-center justify-between text-xs font-mono-tech text-[#087C78]">
+                        <span>SUBDIVISION</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 6. Levelling Survey -->
+                <div class="rounded-2xl border border-[#E4E7EB] bg-white p-6 hover:border-[#087C78] hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#087C78]/10 border border-[#087C78]/20 flex items-center justify-center text-[#087C78] mb-5 group-hover:bg-[#087C78] group-hover:text-white transition-all">
+                            <i class="fa-solid fa-ruler-horizontal text-xl"></i>
+                        </div>
+                        <span class="font-mono-tech text-[10px] text-[#667085] uppercase tracking-widest">Service 06</span>
+                        <h3 class="font-heading text-xl font-bold text-[#10182B] mt-1 mb-3">Levelling Survey</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Land levelling measurements and elevation surveying.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-[#E4E7EB] flex items-center justify-between text-xs font-mono-tech text-[#087C78]">
+                        <span>ELEVATION MEASUREMENT</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 7. Contour Survey -->
+                <div class="rounded-2xl border border-[#E4E7EB] bg-white p-6 hover:border-[#087C78] hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#087C78]/10 border border-[#087C78]/20 flex items-center justify-center text-[#087C78] mb-5 group-hover:bg-[#087C78] group-hover:text-white transition-all">
+                            <i class="fa-solid fa-chart-line text-xl"></i>
+                        </div>
+                        <span class="font-mono-tech text-[10px] text-[#667085] uppercase tracking-widest">Service 07</span>
+                        <h3 class="font-heading text-xl font-bold text-[#10182B] mt-1 mb-3">Contour Survey</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Surveying land contours and variations in terrain.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-[#E4E7EB] flex items-center justify-between text-xs font-mono-tech text-[#087C78]">
+                        <span>TERRAIN CONTOURS</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 8. Land Measurement Services -->
+                <div class="rounded-2xl border border-[#E4E7EB] bg-white p-6 hover:border-[#087C78] hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#087C78]/10 border border-[#087C78]/20 flex items-center justify-center text-[#087C78] mb-5 group-hover:bg-[#087C78] group-hover:text-white transition-all">
+                            <i class="fa-solid fa-calculator text-xl"></i>
+                        </div>
+                        <span class="font-mono-tech text-[10px] text-[#667085] uppercase tracking-widest">Service 08</span>
+                        <h3 class="font-heading text-xl font-bold text-[#10182B] mt-1 mb-3">Land Measurement Services</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Necessary surveying services for proper land measurement of properties.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-[#E4E7EB] flex items-center justify-between text-xs font-mono-tech text-[#087C78]">
+                        <span>PROPERTY MEASUREMENT</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 lg:py-28 bg-[#F7F8F8] border-t border-b border-[#E4E7EB]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+                <!-- Left Visual: team.jpg -->
+                <div class="lg:col-span-6 relative">
+                    <div class="rounded-2xl overflow-hidden border border-[#E4E7EB] shadow-xl bg-white p-2">
+                        <img src="Public/team.jpg" alt="SOUTHERN DIGITAL SURVEYORS Team" class="w-full h-[440px] sm:h-[480px] object-cover rounded-xl">
+                    </div>
+                    <!-- Floating Blueprint Tag -->
+                    <div class="absolute -bottom-6 -right-6 bg-[#10182B] text-white p-6 rounded-2xl shadow-xl border border-white/10 hidden sm:block max-w-xs">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-8 h-8 rounded-lg bg-[#087C78] flex items-center justify-center text-white shrink-0">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <span class="font-heading font-bold text-lg">Survey Professionals</span>
+                        </div>
+                        <p class="text-xs text-white/80 leading-relaxed">
+                            Based in Aluva, serving property owners and development projects across Kerala.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="font-mono-tech text-xs uppercase tracking-widest text-[#087C78] block">About Southern Digital Surveyors</span>
+
+                    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#10182B] tracking-tight">
+                        Dedicated Land Surveying Solutions
+                    </h2>
+
+                    <p class="text-[#667085] text-base leading-relaxed">
+                        SOUTHERN DIGITAL SURVEYORS is a professional land surveying firm based in Aluva, Ernakulam District, Kerala. We provide complete land survey solutions including total station measurement, boundary verification, road development, and plot division.
+                    </p>
+
+                    <p class="text-[#667085] text-base leading-relaxed">
+                        Our work combines modern electronic total station technology with careful field methodology to ensure clear, reliable, and precise survey data for every client project.
+                    </p>
+
+                    <!-- Key Office Info -->
+                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-[#E4E7EB]">
+                        <div>
+                            <span class="block font-heading font-bold text-xl text-[#10182B]">Location</span>
+                            <span class="block text-xs text-[#667085] font-mono-tech mt-1">Sealand Building, Opp. Casino Theatre, Aluva</span>
+                        </div>
+                        <div>
+                            <span class="block font-heading font-bold text-xl text-[#10182B]">Scope</span>
+                            <span class="block text-xs text-[#667085] font-mono-tech mt-1">Nilam, Purayidam &amp; Commercial Properties</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="#contact" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#10182B] text-white text-xs font-mono-tech uppercase tracking-wider hover:bg-[#087C78] transition-all">
+                            Contact Us <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section id="equipment" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="font-mono-tech text-xs uppercase tracking-widest text-[#087C78] block mb-3">Field Technology</span>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#10182B] tracking-tight">
+                    Surveying Equipment
+                </h2>
+                <p class="text-[#667085] mt-4 text-base sm:text-lg">
+                    Real equipment and instruments utilized in our day-to-day surveying operations.
+                </p>
+            </div>
+
+            <!-- Equipment Image Grid: equipment.jpg, equipment1.jpg, epuipment.jpg / equipment4.jpg -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Equipment Image 1 -->
+                <div class="rounded-2xl overflow-hidden border border-[#E4E7EB] bg-white group hover:shadow-xl transition-all">
+                    <div class="h-64 sm:h-72 overflow-hidden bg-[#F7F8F8] relative">
+                        <img src="Public/equipment.jpg" alt="Total Station Surveying Instrument" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-mono-tech text-[10px] text-[#087C78] uppercase tracking-widest">Total Station</span>
+                        <h3 class="font-heading text-xl font-bold text-[#10182B] mt-1 mb-2">Electronic Total Station</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Optical electronic total station equipment for angle measurements, distance calculation, and coordinate logging.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Equipment Image 2 -->
+                <div class="rounded-2xl overflow-hidden border border-[#E4E7EB] bg-white group hover:shadow-xl transition-all">
+                    <div class="h-64 sm:h-72 overflow-hidden bg-[#F7F8F8] relative">
+                        <img src="Public/equipment1.jpg" alt="Surveying Equipment in Field Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-mono-tech text-[10px] text-[#087C78] uppercase tracking-widest">Field Setup</span>
+                        <h3 class="font-heading text-xl font-bold text-[#10182B] mt-1 mb-2">Tripod &amp; Target Prism Systems</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Precision tripods, reflectors, and levelling instruments used for setting out and terrain measurement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Equipment Image 3 -->
+                <div class="rounded-2xl overflow-hidden border border-[#E4E7EB] bg-white group hover:shadow-xl transition-all">
+                    <div class="h-64 sm:h-72 overflow-hidden bg-[#F7F8F8] relative">
+                        <img src="Public/epuipment.jpg" alt="Surveying Equipment Detail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-mono-tech text-[10px] text-[#087C78] uppercase tracking-widest">Digital Measurement</span>
+                        <h3 class="font-heading text-xl font-bold text-[#10182B] mt-1 mb-2">Surveying Technology</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Digital surveying equipment maintaining accuracy for boundary demarcation and site elevation work.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Fieldwork & On-Site Operations Section -->
+    <section id="fieldwork" class="py-20 lg:py-28 bg-[#F7F8F8] border-t border-b border-[#E4E7EB]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="font-mono-tech text-xs uppercase tracking-widest text-[#087C78] block mb-3">Site Experience</span>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#10182B] tracking-tight">
+                    On-Site Field Operations
+                </h2>
+                <p class="text-[#667085] mt-4 text-base sm:text-lg">
+                    Real photographs showing our team conducting land measurements across various property types.
+                </p>
+            </div>
+
+            <!-- Fieldwork Gallery Grid (onsite.jpg, on-site.jpg, onsite1.jpg, person2.jpg) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-2xl overflow-hidden border border-[#E4E7EB] bg-white shadow-sm group hover:shadow-lg transition-all">
+                    <div class="h-60 overflow-hidden">
+                        <img src="Public/onsite.jpg" alt="Onsite Boundary Surveying" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <span class="font-mono-tech text-[10px] text-[#087C78] uppercase">Onsite Survey</span>
+                        <h4 class="font-heading font-bold text-[#10182B] text-base mt-0.5">Property Demarcation</h4>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden border border-[#E4E7EB] bg-white shadow-sm group hover:shadow-lg transition-all">
+                    <div class="h-60 overflow-hidden">
+                        <img src="Public/on-site.jpg" alt="Field Surveying Operations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <span class="font-mono-tech text-[10px] text-[#087C78] uppercase">Field Operations</span>
+                        <h4 class="font-heading font-bold text-[#10182B] text-base mt-0.5">Boundary &amp; Plot Setting</h4>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden border border-[#E4E7EB] bg-white shadow-sm group hover:shadow-lg transition-all">
+                    <div class="h-60 overflow-hidden">
+                        <img src="Public/onsite1.jpg" alt="Terrain Surveying on Site" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <span class="font-mono-tech text-[10px] text-[#087C78] uppercase">Terrain Measurement</span>
+                        <h4 class="font-heading font-bold text-[#10182B] text-base mt-0.5">Contour &amp; Levelling</h4>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden border border-[#E4E7EB] bg-white shadow-sm group hover:shadow-lg transition-all">
+                    <div class="h-60 overflow-hidden">
+                        <img src="Public/person2.jpg" alt="Surveyor Operating Total Station" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <span class="font-mono-tech text-[10px] text-[#087C78] uppercase">Instrument Operation</span>
+                        <h4 class="font-heading font-bold text-[#10182B] text-base mt-0.5">Total Station Alignment</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="font-mono-tech text-xs uppercase tracking-widest text-[#087C78] block">Why Work With Us</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#10182B] tracking-tight">
+                        Built on Accuracy, Clarity &amp; Local Focus
+                    </h2>
+                    <p class="text-[#667085] text-base leading-relaxed">
+                        Land surveying requires technical thoroughness and clear communication. We prioritize accurate measurements and straightforward service for every property inquiry.
+                    </p>
+                    <div class="pt-2">
+                        <a href="tel:9745656435" class="px-6 py-3.5 rounded-xl bg-[#087C78] text-white text-xs font-mono-tech uppercase tracking-wider hover:bg-[#006B68] transition-all inline-flex items-center gap-2 shadow-sm">
+                            <i class="fa-solid fa-phone"></i> Contact Our Team
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                    <div class="p-6 rounded-2xl border border-[#E4E7EB] bg-[#F7F8F8]">
+                        <div class="w-10 h-10 rounded-lg bg-[#087C78]/10 flex items-center justify-center text-[#087C78] mb-4">
+                            <i class="fa-solid fa-crosshairs"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-[#10182B] mb-2">Total Station Measurement</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Using digital total station equipment for reliable angle and distance measurements.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-[#E4E7EB] bg-[#F7F8F8]">
+                        <div class="w-10 h-10 rounded-lg bg-[#087C78]/10 flex items-center justify-center text-[#087C78] mb-4">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-[#10182B] mb-2">Aluva Office Location</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Located opposite Casino Theatre in Aluva, serving Ernakulam and nearby areas.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-[#E4E7EB] bg-[#F7F8F8]">
+                        <div class="w-10 h-10 rounded-lg bg-[#087C78]/10 flex items-center justify-center text-[#087C78] mb-4">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-[#10182B] mb-2">Nilam &amp; Purayidam Surveys</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Experienced with regional land classifications and boundary measurements.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-[#E4E7EB] bg-[#F7F8F8]">
+                        <div class="w-10 h-10 rounded-lg bg-[#087C78]/10 flex items-center justify-center text-[#087C78] mb-4">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-[#10182B] mb-2">Direct Communication</h3>
+                        <p class="text-sm text-[#667085] leading-relaxed">
+                            Clear, prompt responses to phone calls and project consultation inquiries.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 lg:py-28 bg-[#10182B] text-white relative overflow-hidden bg-grid-pattern-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                <!-- Left Column: Contact Details -->
+                <div class="lg:col-span-6 space-y-8">
+                    <div>
+                        <span class="font-mono-tech text-xs uppercase tracking-widest text-[#8CCBC5] block mb-3">Direct Contact</span>
+                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+                            Get in Touch
+                        </h2>
+                        <p class="text-white/70 mt-4 text-base leading-relaxed">
+                            For boundary surveys, plot division, road development, or land measurement inquiries, reach out to SOUTHERN DIGITAL SURVEYORS.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Phone -->
+                        <a href="tel:9745656435" class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#087C78] transition-all group">
+                            <div class="w-12 h-12 rounded-xl bg-[#087C78] flex items-center justify-center text-white shrink-0 group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-phone text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block font-mono-tech text-xs text-[#8CCBC5] uppercase tracking-wider">Phone Link</span>
+                                <span class="block font-heading font-bold text-2xl text-white mt-0.5">9745656435</span>
+                                <span class="block text-xs text-white/60 mt-1">Tap to call directly</span>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:southerndigi22@gmail.com" class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#087C78] transition-all group">
+                            <div class="w-12 h-12 rounded-xl bg-[#087C78] flex items-center justify-center text-white shrink-0 group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block font-mono-tech text-xs text-[#8CCBC5] uppercase tracking-wider">Email Address</span>
+                                <span class="block font-heading font-bold text-xl sm:text-2xl text-white mt-0.5 break-all">southerndigi22@gmail.com</span>
+                                <span class="block text-xs text-white/60 mt-1">Click to write an email</span>
+                            </div>
+                        </a>
+
+                        <!-- Address -->
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10">
+                            <div class="w-12 h-12 rounded-xl bg-[#345C7D] flex items-center justify-center text-white shrink-0">
+                                <i class="fa-solid fa-location-dot text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block font-mono-tech text-xs text-[#8CCBC5] uppercase tracking-wider">Office Address</span>
+                                <span class="block font-heading font-bold text-lg text-white mt-0.5">Sealand Building, Opp. Casino Theatre</span>
+                                <span class="block text-sm text-white/80">Aluva, Ernakulam District, Kerala</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Directions Card -->
+                <div class="lg:col-span-6 flex flex-col justify-between bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md">
+                    <div class="space-y-6">
+                        <div class="w-12 h-12 rounded-xl bg-[#6BA6C8]/20 border border-[#6BA6C8]/30 flex items-center justify-center text-[#6BA6C8]">
+                            <i class="fa-solid fa-map-location-dot text-xl"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl sm:text-3xl font-bold text-white">Visit Our Office in Aluva</h3>
+                        <p class="text-white/70 text-sm sm:text-base leading-relaxed">
+                            Located at Sealand Building, opposite Casino Theatre in Aluva. Use the Google Maps directions link below for easy navigation to our office location.
+                        </p>
+
+                        <!-- Business Tagline Display -->
+                        <div class="p-4 rounded-xl bg-white/5 border border-white/10 font-mono-tech text-xs text-[#8CCBC5]">
+                            <span class="block uppercase font-semibold">SOUTHERN DIGITAL SURVEYORS</span>
+                            <span class="block text-white/80 mt-1">TAGLINE: TOTAL LAND SURVEY SOLUTIONS</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 mt-8 border-t border-white/10">
+                        <a href="https://maps.google.com/?q=Casino+Theatre+Aluva" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-xl bg-[#087C78] text-white text-center font-mono-tech text-xs uppercase tracking-wider hover:bg-[#006B68] transition-all flex items-center justify-center gap-2.5 shadow-lg">
+                            <i class="fa-solid fa-directions text-base"></i> Open Google Maps Directions
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b101d] text-white/70 py-12 border-t border-white/10 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 pb-8 border-b border-white/10">
+                <div class="flex items-center gap-3.5">
+                    <img src="Public/brand/logo.png" alt="SOUTHERN DIGITAL SURVEYORS" class="h-10 w-auto object-contain">
+                    <div>
+                        <span class="block font-heading font-bold text-lg text-white tracking-wide">SOUTHERN DIGITAL SURVEYORS</span>
+                        <span class="block font-mono-tech text-[10px] text-[#8CCBC5] uppercase">TOTAL LAND SURVEY SOLUTIONS • ALUVA</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-6 font-medium text-xs font-mono-tech text-white/80">
+                    <a href="#services" class="hover:text-white transition-colors">SERVICES</a>
+                    <a href="#about" class="hover:text-white transition-colors">ABOUT US</a>
+                    <a href="#equipment" class="hover:text-white transition-colors">EQUIPMENT</a>
+                    <a href="#fieldwork" class="hover:text-white transition-colors">FIELDWORK</a>
+                    <a href="#contact" class="hover:text-white transition-colors">CONTACT</a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/50">
+                <p>&copy; 2026 SOUTHERN DIGITAL SURVEYORS, Aluva, Kerala. All rights reserved.</p>
+                <p class="font-mono-tech">Sealand Building, Opp. Casino Theatre, Aluva, Kerala | Ph: 9745656435</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactive Mobile Navigation -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
