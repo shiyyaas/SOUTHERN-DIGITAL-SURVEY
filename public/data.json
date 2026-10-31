@@ -1,0 +1,228 @@
+{
+  "company": {
+    "name": "SOUTHERN DIGITAL SURVEYORS",
+    "shortName": "SOUTHERN DIGITAL",
+    "tagline": "Total Land Survey Solutions",
+    "locationBadge": "Aluva, Kerala • Total Land Survey Solutions",
+    "fullTitle": "SOUTHERN DIGITAL SURVEYORS | Total Land Survey Solutions in Aluva, Kerala",
+    "metaDescription": "Professional land surveying services in Aluva, Kerala. Total station survey, boundary survey (Nilam & Purayidam), plot division, contour survey, levelling, and land measurement solutions.",
+    "footerDescription": "Total Land Survey Solutions • Aluva",
+    "copyrightYear": "2026"
+  },
+  "contact": {
+    "phone": "+91 9207076787",
+    "phoneRaw": "9745656435",
+    "phoneTel": "tel:9745656435",
+    "phoneDisplay": "+91 9207076787",
+    "phoneShortDisplay": "9207076787",
+    "phoneButtonText": "Call: 9207076787",
+    "email": "southerndigi22@gmail.com",
+    "emailMailto": "mailto:southerndigi22@gmail.com",
+    "addressShort": "Panchayath Junction, Edathala, Aluva, Kerala 683561",
+    "addressLine1": "Panchayath Junction, Edathala",
+    "addressLine2": "Aluva, Kerala 683561",
+    "coordinates": "10.1099° N, 76.3570° E",
+    "mapsUrl": "https://maps.app.goo.gl/gSEyYRK26AwzZefx8",
+    "whatsappUrl": "https://wa.me/919745656435",
+    "whatsappNumber": "+91 9745656435"
+  },
+  "businessHours": {
+    "weekdays": "Monday – Saturday:",
+    "weekdayHours": "9:00 AM – 6:00 PM",
+    "sunday": "Sunday:",
+    "sundayHours": "By Appointment"
+  },
+  "hero": {
+    "badge": "Aluva, Kerala • Total Land Survey Solutions",
+    "headline": "Precision in Every Measurement.",
+    "description": "Professional land surveying firm based in Aluva. Delivering total station surveys, boundary demarcation (Nilam & Purayidam), plot division, contour mapping, and road development surveys with absolute technical accuracy.",
+    "primaryCtaText": "Explore Our Services",
+    "primaryCtaHref": "#services",
+    "secondaryCtaText": "Get Directions",
+    "secondaryCtaHref": "https://maps.app.goo.gl/gSEyYRK26AwzZefx8",
+    "image": {
+      "src": "Public/main-person.jpg",
+      "alt": "Professional Surveyor at Southern Digital Surveyors",
+      "tagOperation": "FIELD OPERATION // TOTAL STATION SURVEY",
+      "tagLocation": "ALUVA, KERALA"
+    }
+  },
+  "servicesSection": {
+    "eyebrow": "Comprehensive Expertise",
+    "title": "All Eight Professional Survey Services",
+    "description": "Rigorous land measurement solutions tailored to property, boundary, and development requirements."
+  },
+  "services": [
+    {
+      "id": "01",
+      "code": "01 // Total Station",
+      "title": "Total Station Survey",
+      "description": "Measurement and surveying using advanced total station equipment for exact dimensions.",
+      "badge": "PRECISION EQUIPMENT"
+    },
+    {
+      "id": "02",
+      "code": "02 // Boundary",
+      "title": "Boundary Survey",
+      "description": "Boundary surveying for land, including specialized land categories referred to as Nilam and Purayidam.",
+      "badge": "NILAM & PURAYIDAM"
+    },
+    {
+      "id": "03",
+      "code": "03 // Infrastructure",
+      "title": "Road Development Survey",
+      "description": "Land surveying and alignment profiling for road development projects.",
+      "badge": "ROAD ALIGNMENT"
+    },
+    {
+      "id": "04",
+      "code": "04 // Construction",
+      "title": "Location Survey and Setting Out",
+      "description": "Surveying and setting out for building-related requirements and structural layout.",
+      "badge": "BUILDING LAYOUT"
+    },
+    {
+      "id": "05",
+      "code": "05 // Subdivision",
+      "title": "Plot Division",
+      "description": "Land subdivision and plot division adhering strictly to property guidelines.",
+      "badge": "PROPERTY DIVISION"
+    },
+    {
+      "id": "06",
+      "code": "06 // Elevation",
+      "title": "Levelling Survey",
+      "description": "Land levelling measurements and elevation surveying for grading and planning.",
+      "badge": "ELEVATION PROFILING"
+    },
+    {
+      "id": "07",
+      "code": "07 // Topography",
+      "title": "Contour Survey",
+      "description": "Surveying land contours and variations in terrain for engineering analysis.",
+      "badge": "TERRAIN CONTOURS"
+    },
+    {
+      "id": "08",
+      "code": "08 // Measurement",
+      "title": "Land Measurement Services",
+      "description": "Necessary surveying services for proper land measurement of properties.",
+      "badge": "AREA VERIFICATION"
+    }
+  ],
+  "about": {
+    "eyebrow": "About Our Firm",
+    "title": "SOUTHERN DIGITAL SURVEYORS",
+    "paragraphs": [
+      "Based in Aluva, Ernakulam District, Kerala, Southern Digital Surveyors provides total land survey solutions with unwavering commitment to accuracy, integrity, and dependable field service.",
+      "Our team of experienced surveyors operates professional total station and digital measuring equipment to assist property owners, builders, and developers across Kerala."
+    ],
+    "image": {
+      "src": "Public/team.jpg",
+      "alt": "Southern Digital Surveyors Team"
+    },
+    "highlights": [
+      {
+        "title": "Aluva Office",
+        "detail": "Panchayath Junction, Edathala"
+      },
+      {
+        "title": "Total Solutions",
+        "detail": "Boundary to Contour Surveying"
+      }
+    ]
+  },
+  "equipmentSection": {
+    "eyebrow": "Technical Hardware",
+    "title": "Professional Surveying Equipment",
+    "description": "High-precision electronic and optical instruments deployed for field measurement."
+  },
+  "equipment": [
+    {
+      "tag": "Instrument 01",
+      "title": "Total Station Unit",
+      "description": "Advanced electronic theodolite integrated with an electronic distance meter (EDM).",
+      "image": "Public/equipment.jpg",
+      "alt": "Total Station Instrument"
+    },
+    {
+      "tag": "Instrument 02",
+      "title": "Field Setup Gear",
+      "description": "Precision tripods, prisms, and leveling rods for accurate data collection.",
+      "image": "Public/equipment1.jpg",
+      "alt": "Field Gear and Setup"
+    },
+    {
+      "tag": "Instrument 03",
+      "title": "Calibration Tools",
+      "description": "Specialized measurement tools maintained to rigorous accuracy standards.",
+      "image": "Public/epuipment.jpg",
+      "alt": "Surveying Equipment Details"
+    }
+  ],
+  "fieldworkSection": {
+    "eyebrow": "On-Site Operations",
+    "title": "Fieldwork in Action",
+    "description": "Glimpses from active surveying sites across Kerala."
+  },
+  "fieldwork": [
+    {
+      "tag": "Demarcation",
+      "title": "Property Survey",
+      "image": "Public/onsite.jpg",
+      "alt": "Onsite Survey 1"
+    },
+    {
+      "tag": "Setting Out",
+      "title": "Boundary Layout",
+      "image": "Public/on-site.jpg",
+      "alt": "Onsite Survey 2"
+    },
+    {
+      "tag": "Topography",
+      "title": "Contour Mapping",
+      "image": "Public/onsite1.jpg",
+      "alt": "Onsite Survey 3"
+    },
+    {
+      "tag": "Total Station",
+      "title": "Precision Measurement",
+      "image": "Public/person2.jpg",
+      "alt": "Surveyor at Work"
+    }
+  ],
+  "contactSection": {
+    "badge": "Available in Aluva & Across Kerala",
+    "headline": "Let's Discuss Your Land Survey Requirements.",
+    "description": "Whether you need a boundary demarcation (Nilam & Purayidam), total station survey, or plot division, our expert team in Edathala, Aluva is ready to assist with absolute precision.",
+    "cards": {
+      "call": {
+        "title": "Direct Call",
+        "value": "+91 9207076787",
+        "action": "Tap to call"
+      },
+      "whatsapp": {
+        "title": "WhatsApp Chat",
+        "value": "Instant Inquiry",
+        "action": "Open WhatsApp"
+      },
+      "email": {
+        "title": "Email Support",
+        "value": "southerndigi22@gmail.com",
+        "action": "Send email"
+      },
+      "gps": {
+        "title": "GPS Coordinates",
+        "value": "10.1099° N, 76.3570° E",
+        "action": "Precise Survey Location"
+      }
+    },
+    "officeCard": {
+      "badge": "HQ Office",
+      "title": "Visit Our Aluva Office",
+      "line1": "Panchayath Junction, Edathala",
+      "line2": "Aluva, Kerala 683561",
+      "buttonText": "Open Google Maps Directions"
+    }
+  }
+}
