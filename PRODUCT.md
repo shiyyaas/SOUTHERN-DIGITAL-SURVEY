@@ -37,6 +37,7 @@ Clients visiting on mobile or desktop seeking reliable contact numbers, office d
 - Company visiting card and brand assets.
 - Real photographs in `Public/`.
 
+
 ## Product Principles
 1. Technical precision and Apple-inspired minimalism.
 2. Complete authenticity without fabricated statistics or testimonials.
