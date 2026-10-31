@@ -9,7 +9,6 @@ web
 ## Stack
 HTML, CSS, JavaScript, Tailwind CSS (v4 CDN), Centralized JSON Data Layer (`public/data.json`)
 
-
 ## Users
 Property owners, real estate developers, engineers, and individuals in Aluva and across Kerala requiring professional land measurement and surveying services.
 
