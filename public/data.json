@@ -18,13 +18,13 @@
     "phoneButtonText": "Call: 9207076787",
     "email": "southerndigi22@gmail.com",
     "emailMailto": "mailto:southerndigi22@gmail.com",
-    "addressShort": "Panchayath Junction, Edathala, Aluva, Kerala 683561",
+    "addressShort": "Panchayath Junction, Edathala, Aluva, Keralam 683561",
     "addressLine1": "Panchayath Junction, Edathala",
     "addressLine2": "Aluva, Kerala 683561",
     "coordinates": "10.1099° N, 76.3570° E",
     "mapsUrl": "https://maps.app.goo.gl/gSEyYRK26AwzZefx8",
-    "whatsappUrl": "https://wa.me/919745656435",
-    "whatsappNumber": "+91 9745656435"
+    "whatsappUrl": "https://wa.me/919207076787",
+    "whatsappNumber": "+91 9207076787"
   },
   "businessHours": {
     "weekdays": "Monday – Saturday:",
@@ -33,7 +33,7 @@
     "sundayHours": "By Appointment"
   },
   "hero": {
-    "badge": "Aluva, Kerala • Total Land Survey Solutions",
+    "badge": "Aluva, Keralam • Total Land Survey Solutions",
     "headline": "Precision in Every Measurement.",
     "description": "Professional land surveying firm based in Aluva. Delivering total station surveys, boundary demarcation (Nilam & Purayidam), plot division, contour mapping, and road development surveys with absolute technical accuracy.",
     "primaryCtaText": "Explore Our Services",
