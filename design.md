@@ -17,6 +17,7 @@ The result should feel like a modern engineering company—not a generic constru
 4. **Authentic imagery:** prioritize the company's real equipment, office, team, and completed projects.
 5. **Brand restraint:** teal is the signature color; navy anchors the interface; orange is used sparingly.
 6. **Mobile-first usability:** contact and directions must be easy to access on small screens.
+7. **File-based data separation:** presentational layout classes remain decoupled from business text and metadata.
 
 ---
 
@@ -91,6 +92,23 @@ Use a compact font system that balances the narrow, technical feel of the logo w
 
 ---
 
+## 4. File-Based Data Architecture & Dynamic Content Bridge
+
+To maintain clean separation between layout styling and business information, all content is managed in `public/data.json`.
+
+### Schema Guidelines
+- **Immutability of styles:** Tailwind utility classes remain defined in `index.html` structure or template fragments.
+- **Dynamic Content Injection:** Elements with specific IDs or `data-field` attributes receive text values safely via `element.textContent` or attributes (`href`, `alt`, `src`) without risking HTML injection.
+- **Dynamic List Iteration:** Repeating items (Services, Equipment, Fieldwork items) utilize `<template>` elements or container prototypes that preserve all hover styles, transitions, borders, and typography while iterating through JSON records.
+
+### Dynamic Content Flow
+1. Page loads with baseline layout scaffolding and accessible fallback structure.
+2. `DOMContentLoaded` event triggers client-side fetch targeting `public/data.json`.
+3. The content bridge parses JSON payload and binds keys to DOM nodes.
+4. If fetch fails (e.g. offline testing without local server), gracefully falls back or logs clear diagnostics without breaking page functionality.
+
+---
+
 ## 5. Components
 
 ### Imagery and technical graphics
@@ -112,13 +130,13 @@ Use a compact font system that balances the narrow, technical feel of the logo w
 ### Services
 - Present only services confirmed by the business.
 - Use a clean grid with concise copy and restrained line icons.
-- Do not invent service claims or credentials.
+- Rendered cleanly via dynamic iteration from `public/data.json`.
 
 ### About / Why choose us
 - Use short, factual copy and real business details.
 - Emphasize reliability, precision, experience, and service quality only where supported by the business.
 
-### Projects
+### Projects & Fieldwork
 - Prefer real project photographs with short captions.
 - Use a clean gallery rather than decorative image collages.
 
@@ -132,13 +150,13 @@ Use a compact font system that balances the narrow, technical feel of the logo w
 - Verify all business details before publishing.
 
 ### Footer
-- Use navy or white, depending on page balance.
+- Use navy or dark ink depending on page balance.
 - Include logo, key navigation, contact details, and directions.
 - Keep it compact and uncluttered.
 
 ---
 
-## 8. Tailwind CSS v4 Tokens
+## 8. Tailwind CSS Tokens
 
 Use these tokens as the single source of truth. Do not introduce arbitrary colors throughout components without a clear reason.
 
@@ -170,8 +188,6 @@ Use these tokens as the single source of truth. Do not introduce arbitrary color
 }
 ```
 
-If using Tailwind CSS v3 instead, translate these tokens into `theme.extend.colors` and `theme.extend.fontFamily` in `tailwind.config.js`.
-
 ---
 
 ## 9. Accessibility and Quality
@@ -192,21 +208,15 @@ If using Tailwind CSS v3 instead, translate these tokens into `theme.extend.colo
 
 ### Do
 - Keep layouts spacious, calm, and precise.
-- Preserve teal as the recognizable brand color.
-- Use navy, steel blue, and technical graphics in moderation.
-- Use real company imagery and verified information.
+- Preserve brand colors and technical styling.
+- Rely on `public/data.json` for content updates.
 - Keep copy short, direct, and useful.
 - Make phone and directions actions obvious.
 
 ### Don't
 - Don't make every section dark.
-- Don't use orange and purple as competing primary colors.
+- Don't hardcode business text in markup when it belongs in `data.json`.
 - Don't overuse gradients, glassmorphism, shadows, or rounded cards.
 - Don't cover every surface with grids or contour patterns.
 - Don't use multiple display fonts indiscriminately.
 - Don't invent services, experience, credentials, reviews, or project results.
-- Don't imitate Apple's exact layouts or branding; take inspiration from its restraint, clarity, and polish.
-
-## Final Design Goal
-
-A calm, premium surveying-company website: **Apple-like simplicity, industrial precision, and the original Southern Digital Survey identity**. Every visual element should feel intentional, and the company’s real work should remain the focus.
