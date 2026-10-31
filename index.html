@@ -59,6 +59,10 @@
     </style>
 </head>
 <body class="selection:bg-[#0f7d45] selection:text-white">
+    <!-- Skip to Main Content Link -->
+    <a href="#main-content" class="fixed -top-16 left-4 z-[100] focus:top-4 transition-all px-4 py-2 bg-[#0f7d45] text-white font-medium text-sm rounded-lg shadow-xl outline-none ring-2 ring-offset-2 ring-[#0f7d45]">
+        Skip to main content
+    </a>
 
     <!-- Top Metadata Bar -->
     <div class="bg-[#2b2622] text-[#ebe5e3] py-2.5 px-4 text-xs font-medium tracking-wide border-b border-[#2b2622]/20">
@@ -108,7 +112,7 @@
                 </a>
             </div>
 
-            <button id="menu-btn" aria-label="Toggle menu" class="md:hidden p-2 rounded-lg text-[#2b2622] hover:bg-[#e1dad7] focus:outline-none">
+            <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden p-2 rounded-lg text-[#2b2622] hover:bg-[#e1dad7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0f7d45]">
                 <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
@@ -131,8 +135,10 @@
         </div>
     </header>
 
-    <!-- Hero Section: Contact Sheet / Precision World -->
-    <section class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <!-- Main Content Landmark -->
+    <main id="main-content">
+        <!-- Hero Section: Contact Sheet / Precision World -->
+        <section class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-7 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0f7d45]/10 text-[#0f7d45] text-xs font-medium uppercase tracking-wider">
@@ -515,7 +521,8 @@
 
             </div>
         </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-[#1a1715] text-[#ebe5e3]/70 py-12 border-t border-white/10 text-sm">
@@ -551,13 +558,27 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         if (menuBtn && mobileMenu) {
+            const toggleMenu = (isOpen) => {
+                mobileMenu.classList.toggle('hidden', !isOpen);
+                menuBtn.setAttribute('aria-expanded', String(isOpen));
+                const icon = menuBtn.querySelector('i');
+                if (icon) {
+                    icon.className = isOpen ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
+                }
+            };
             menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+                toggleMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
             });
             document.querySelectorAll('#mobile-menu a').forEach(link => {
                 link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
+                    toggleMenu(false);
                 });
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
+                    toggleMenu(false);
+                    menuBtn.focus();
+                }
             });
         }
     </script>
