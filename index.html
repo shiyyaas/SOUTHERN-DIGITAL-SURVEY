@@ -481,16 +481,19 @@
                             </span>
                         </a>
 
-                        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col justify-between">
+                        <button type="button" id="card-gps-btn" aria-label="Copy GPS coordinates 10.1099° N, 76.3570° E to clipboard" class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#0f7d45] hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0f7d45] transition-all group flex flex-col justify-between text-left cursor-pointer">
                             <div>
-                                <div class="w-12 h-12 rounded-xl bg-[#35205F] border border-white/20 flex items-center justify-center text-[#8CCBC5] mb-4 shadow-md">
+                                <div id="card-gps-icon" class="w-12 h-12 rounded-xl bg-[#35205F] border border-white/20 flex items-center justify-center text-[#8CCBC5] mb-4 group-hover:scale-110 transition-all shadow-md">
                                     <i class="fa-solid fa-crosshairs text-xl"></i>
                                 </div>
                                 <span id="card-gps-title" class="block text-xs font-mono text-[#8CCBC5] uppercase tracking-wider">GPS Coordinates</span>
                                 <span id="card-gps-val" class="block font-mono font-semibold text-white mt-1">10.1099° N, 76.3570° E</span>
                             </div>
-                            <span id="card-gps-act" class="text-xs text-white/50 mt-4 block">Precise Survey Location</span>
-                        </div>
+                            <span class="text-xs text-white/50 mt-4 flex items-center gap-1 group-hover:text-white transition-colors">
+                                <span id="card-gps-act">Copy coordinates</span> <i id="card-gps-act-icon" class="fa-solid fa-copy text-[10px]"></i>
+                            </span>
+                            <span id="card-gps-status" class="sr-only" role="status" aria-live="polite"></span>
+                        </button>
                     </div>
                 </div>
 
@@ -905,14 +908,56 @@
             }
         };
 
+        const initGpsCopy = () => {
+            const btn = document.getElementById('card-gps-btn');
+            const valEl = document.getElementById('card-gps-val');
+            const actEl = document.getElementById('card-gps-act');
+            const iconEl = document.getElementById('card-gps-icon');
+            const actIconEl = document.getElementById('card-gps-act-icon');
+            const statusEl = document.getElementById('card-gps-status');
+            if (!btn || !valEl || !actEl) return;
+
+            let timeoutId = null;
+            btn.addEventListener('click', async () => {
+                const text = valEl.textContent.trim();
+                try {
+                    await navigator.clipboard.writeText(text);
+                } catch {
+                    const ta = document.createElement('textarea');
+                    ta.value = text;
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(ta);
+                }
+
+                actEl.textContent = 'Copied to clipboard!';
+                actEl.classList.add('text-[#0f7d45]', 'font-semibold');
+                if (actIconEl) actIconEl.className = 'fa-solid fa-check text-[10px] text-[#0f7d45]';
+                if (iconEl) iconEl.classList.add('ring-2', 'ring-[#0f7d45]');
+                if (statusEl) statusEl.textContent = `Coordinates ${text} copied to clipboard`;
+
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                    actEl.textContent = 'Copy coordinates';
+                    actEl.classList.remove('text-[#0f7d45]', 'font-semibold');
+                    if (actIconEl) actIconEl.className = 'fa-solid fa-copy text-[10px]';
+                    if (iconEl) iconEl.classList.remove('ring-2', 'ring-[#0f7d45]');
+                    if (statusEl) statusEl.textContent = '';
+                }, 2200);
+            });
+        };
+
         // Wire DOM ready listeners
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => {
                 initMenu();
+                initGpsCopy();
                 loadWebsiteData();
             });
         } else {
             initMenu();
+            initGpsCopy();
             loadWebsiteData();
         }
     </script>
